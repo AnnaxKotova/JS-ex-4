@@ -1,12 +1,11 @@
 function birds(){
-let oiseaux;
+let oiseaux=document.getElementById('vitesse').value;
 if (oiseaux){
 if (document.getElementById('poulet').checked) {
- oiseaux = document.getElementById('poulet').value;
-    if (document.getElementById('vitesse').value < 14){
+    if (oiseaux < 14){
         document.getElementById("message").innerHTML = '« La vitesse saisie est trop petite »';
     }
-    else if (document.getElementById('vitesse').value > 14){
+    else if (oiseaux > 14){
         document.getElementById("message").innerHTML = '« La vitesse saisie est trop grande »';
     }
     else{
@@ -16,11 +15,10 @@ if (document.getElementById('poulet').checked) {
 
 
 else if (document.getElementById('canard').checked) {
-    oiseaux = document.getElementById('canard').value;
-        if (document.getElementById('vitesse').value < 60){
+        if (oiseaux < 60){
             document.getElementById("message").innerHTML = '« La vitesse saisie est trop petite »';
         }
-        else if (document.getElementById('vitesse').value > 60){
+        else if (oiseaux > 60){
             document.getElementById("message").innerHTML = '« La vitesse saisie est trop grande »';
         }
         else{
