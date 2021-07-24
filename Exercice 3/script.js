@@ -1,5 +1,5 @@
 function birds(){
-let oiseaux;
+let oiseaux=document.getElementById('vitesse').value;
 if (oiseaux){
     if (document.getElementById('poulet').checked){
         oiseaux = document.getElementById('poulet').value;
